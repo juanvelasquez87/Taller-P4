@@ -1,6 +1,7 @@
 package main;
 import punto.P2;
 import punto.P3;
+import punto.P4;
 import figura.Cubo;
 import figura.Triangulo;
 
@@ -14,6 +15,11 @@ public class Principal {
         P3 quintoPunto = new P3(1, 2, 3);
         P3 sextoPunto = new P3(segundoPunto, 2);
         P3 septimoPunto = new P3(quintoPunto);
+        P4 octavoPunto = new P4();
+        P4 novenoPunto = new P4(5,6,7,8);
+        P4 decimoPunto = new P4(quintoPunto,8);
+        P4 oncePunto = new P4(decimoPunto);
+
 
         Triangulo equilatero = new Triangulo();
         equilatero.setPunto1(punto2);
@@ -34,7 +40,8 @@ public class Principal {
         System.out.println(punto2.calcularDistancia(segundoPunto));
         System.out.println(cuartoPunto);
         System.out.println(quintoPunto);
-
+        System.out.println(decimoPunto);
+        System.out.println(octavoPunto.calcularDistancia(decimoPunto));
         //P2 pruebaLiskov = new P3();
         //((P3)pruebaLiskov).
         //En la prueba de Liskov se hace instancia a los atributos de la herencia padre. la cual seria P2.
